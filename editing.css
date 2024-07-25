@@ -1,0 +1,157 @@
+.image-container {
+    
+   
+display: flex;
+    
+    justify
+
+   
+justify-content: space-around; /* מחלק את התמונות באופן שווה */
+    flex-wrap: wrap; /* מאפשר לתמונות לעבור לשורה הבאה במקרה הצורך */
+}
+
+
+
+.circle-image {
+    width: 300px; /* הגדרת רוחב התמונה */
+    height: 330px; /* הגדרת גובה התמונה */
+    border-radius: 50%; /* מאפיין זה יהפוך את התמונה לעגולה */
+    object-fit: cover; /* מאפיין זה יגרום לתמונה להתאים בצורה טובה יותר למסגרת */
+}
+.circle-images {
+    width: 220px; /* הגדרת רוחב התמונה */
+    height: 220px; /* הגדרת גובה התמונה */
+    border-radius: 50%; /* מאפיין זה יהפוך את התמונה לעגולה */
+    object-fit: cover; /* מאפיין זה יגרום לתמונה להתאים בצורה טובה יותר למסגרת */
+	object-fit: cover; /* גורם לתמונה להתאים למסגרת שלה */
+    
+   
+object-position: center; /* ממקם את מרכז התמונה במרכז המסגרת */
+    
+   
+margin: 10px; /* מרווח בין התמונות */
+
+	margin: 10px;
+}
+body {
+  background: linear-gradient(to bottom, #f0f8ff 0%, #80c7ff 50%, #007bff 100%);
+}
+body {
+  background: linear-gradient(to right, #e0ffff 0%, #007bff 100%);
+  color: white; /* הוסף כלל זה כדי להפוך את צבע הטקסט ללבן */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+body {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #00008b, #000000), url('texture.png');
+    background-size: cover, cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed; /* גורם לרקע להישאר קבוע */
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 139, 0.8); /* צבע כחול כהה עם שקיפות */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* צבע לבן עם שקיפות */
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 100px 20px 20px; /* הוספתי padding למעלה כדי לפצות על הסרגל הקבוע */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    background-color: navy;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center; /* כדי למרכז את הטקסט */
+}
+
+.container {
+    display: inline-block;
+    text-align: right; /* כדי שהרשימה תהיה מימין לשמאל */
+}
+
+ul {
+    list-style-position: inside; /* כדי שהנקודות יהיו קרובות יותר לטקסט */
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-top: 30px;
+}
+.image1 {
+    
+   
+object-position:0% 70%; /* שנה את הערכים בהתאם לצורך */
+
+}
+.image2 {
+    
+   
+object-position:400% 10%;
+}
+.image4 {
+    
+   
+object-position:600% 0%;
+}
+.image5 {
+    
+   
+object-position:700% 10%;
+}
+.image6 {
+    
+   
+object-position:400% 0%;
+}
+.image7 {
+    
+   
+object-position:20% 35%;
+}
