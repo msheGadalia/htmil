@@ -155,3 +155,36 @@ object-position:400% 0%;
    
 object-position:20% 35%;
 }
+/* דוגמה לסרגל עליון רספונסיבי */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+    justify-content: center;
+    background-color: rgba(0, 0, 139, 0.8); /* Dark blue with transparency */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+/* מדיה קוורי לתצוגות קטנות */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    flex: none;
+    width: 100%;
+  }
+}
