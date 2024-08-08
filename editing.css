@@ -85,6 +85,8 @@ body {
     left: 0;
     z-index: 1000;
     padding: 10px 0;
+	flex-wrap: wrap;
+    
 }
 
 .navbar ul {
@@ -109,20 +111,6 @@ body {
 
 .navbar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.3); /* צבע לבן עם שקיפות */
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    height: 2px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
 }
 
 .content {
@@ -200,22 +188,18 @@ ul {
 
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        display: none; /* הסתרת התפריט בנייד כברירת מחדל */
-    }
-
-    .navbar ul.active {
-        display: flex; /* הצגת התפריט כאשר הוא פעיל */
-    }
-
-    .menu-toggle {
-        display: flex; /* הצגת כפתור המבורגר */
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
     }
 
     .navbar ul li {
-        margin: 10px 0;
+        margin: 0 10px;
+    }
+
+    main {
+        margin-top: 60px; /* Adjust margin as needed based on the height of your nav */
     }
 
     .nav-item {
@@ -227,7 +211,6 @@ ul {
         text-align: center;
     }
 }
-
 .contact-icons img {
     width: 30px; /* שינוי הגודל ל-30 פיקסלים */
     height: 30px;
@@ -237,7 +220,6 @@ ul {
     width: 30px; /* הגדרת רוחב האייקון ל-30 פיקסלים */
     height: 30px; /* הגדרת גובה האייקון ל-30 פיקסלים */
 }
-
 /* styles.css */
 .icon-container {
     display: flex;
@@ -249,15 +231,42 @@ ul {
     height: 40px; /* Adjust size as needed */
     margin: 0 10px; /* Space between icons */
 }
-
 .icons-container {
-    display: flex;
-    justify-content: space-around; /* כוונן את המרחב בהתאם לצורך */
-    padding: 20px;
-    flex-wrap: nowrap; /* מבטיח שכל האייקונים יהיו בשורה אחת */
+    
+    dis
+
+  
+display: flex;
+    
+    justify-conten
+
+    justify-co
+
+    justif
+
+    j
+justify-content: space-around; /* כוונן את המרחב בהתאם לצורך */
+    
+ 
+padding: 20px;
+    
+   
+flex-wrap: nowrap; /* מבטיח שכל האייקונים יהיו בשורה אחת */
 }
 
+
+}
 .icons-container img {
-    width: 30px; /* גודל קטן יותר */
-    height: auto;
+    
+    wi
+
+   
+width: 30px; /* גודל קטן יותר */
+    
+    heig
+
+    h
+
+  
+height: auto;
 }
