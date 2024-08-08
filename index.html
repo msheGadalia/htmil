@@ -87,7 +87,14 @@
         }
     </style>
 </head>
+
 <body>
+ <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     <div id="home"></div>
     <nav class="navbar">
         <ul>
@@ -174,6 +181,14 @@
 </section>    
 </div>
 </div>
+  <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
 
     <script>
         var modal = document.getElementById("myModal");
