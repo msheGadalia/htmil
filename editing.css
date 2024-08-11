@@ -119,7 +119,36 @@ body {
         flex: 1 1 50%; /* On small screens, allow items to wrap into two rows */
     }
 }
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    justify-content: center; /* Center the items */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
 
+.navbar ul li {
+    flex: 1 1 auto; /* Flex items grow to fill available space on large screens */
+    text-align: center; /* Center the text */
+    margin: 5px 0; /* Space between rows on mobile */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        flex: 1 1 50%; /* On small screens, allow items to wrap into two rows */
+    }
+}
 
 .content {
     width: 100%;
