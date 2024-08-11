@@ -91,7 +91,8 @@ body {
 
 .navbar ul {
     display: flex;
-    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    justify-content: center; /* Center the items */
     width: 100%;
     padding: 0;
     margin: 0;
@@ -99,8 +100,9 @@ body {
 }
 
 .navbar ul li {
-    flex: 1; /* Each item will take up equal space */
+    flex: 1 1 auto; /* Flex items grow to fill available space on large screens */
     text-align: center; /* Center the text */
+    margin: 5px 0; /* Space between rows on mobile */
 }
 
 .navbar ul li a {
@@ -112,10 +114,12 @@ body {
     width: 100%;
 }
 
-
-.navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* צבע לבן עם שקיפות */
+@media (max-width: 768px) {
+    .navbar ul li {
+        flex: 1 1 50%; /* On small screens, allow items to wrap into two rows */
+    }
 }
+
 
 .content {
     width: 100%;
