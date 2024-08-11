@@ -1,0 +1,216 @@
+<html>
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private profile</title>
+    <link rel="stylesheet" type="text/css" href="editing.css" />
+    <style>
+        /* CSS ?????? */
+        body {
+            direction: rtl;
+            background-color: #001f4d;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #001f4d;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .family-photos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .family-photos img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+
+        .close-btn {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .close-btn:hover {
+            color: #ccc;
+        }
+
+        @media (min-width: 600px) {
+            .family-photos img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .close-btn {
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navList = document.querySelector('nav ul');
+
+    menuIcon.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+</script>
+
+
+<body>
+
+
+    <div id="home"></div>
+    <nav class="navbar">
+	<div class="menu-icon" id="menu-icon">
+    <img src="hamburger-icon.png" alt="Menu Icon" />
+</div>
+
+	
+        <ul>
+            <li><a href="#home">Homepage</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#work">Work Experience</a></li>
+			<li><a href = "#QA">QA</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="my CV.html" target="_blank">CV</a></li>
+        </ul>
+    </nav>
+    <div class="content center-text">
+        <h1>Welcome to my personal area</h1>
+        <img src="20240722_171734.jpg" alt="Profile Image" class="circle-image image7">
+        <h2><u>My Name: Moshe Gadalia</u></h2>
+        <h3><u>Software Tester (QA)</u></h3>
+        <b>My desire is: to find an entry level position in software testing</b>
+        <br/><br/><br/>
+        Jerusalem, Israel
+        <h2>About Myself</h2>
+        <section id="about" class="center-text">
+            <p>Hello, I am Moshe Gedaliah, 32 years old from Jerusalem. I was born in France in the city of <a href="https://fr.wikipedia.org/wiki/Aix-les-Bains" target="_blank">Aix-la-Bain</a> in 1992. In 1995, we immigrated to Israel and I live in Jerusalem.</p>
+            <p>I am a person who really likes to travel and hang out and enjoy even small outings. I don't need long and distant outings but small breaks from the routine do me a  good.</p>
+            <p>I have several hobbies in life, one of which is to disassemble and build things and check that everything works perfectly as it should. When I was little, I built a radio and a stereo system as well as a small ship that sailed in the pond at 10 km/h.</p>
+            <p>I have a dream one day to build the mechanical part of the car. I can sit all day in the garage and help disassemble and reassemble. In the past, I was even accepted to the aerospace industry to disassemble and reassemble airplane engines.</p>
+            <p>In 2013 I got married and today I am the father of 5 children.</p>
+            <h3><a href="#" id="openModal">To view pictures of my family click here</a></h3>
+        </section>
+        <div id="myModal" class="overlay">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <div class="family-photos">
+                    <img src="gallery teo/SmartSelect_20240722_181720_Gallery.jpg" class="circle-images image1" alt="????? 1"/>
+                    <img src="gallery teo/SmartSelect_20240722_181823_Gallery.jpg" class="circle-images image2" alt="????? 2"/>
+                    <img src="gallery teo/SmartSelect_20240722_182106_Gallery.jpg" class="circle-images image3" alt="????? 3"/>
+                    <img src="gallery teo/SmartSelect_20240722_181940_Gallery.jpg" class="circle-images image4" alt="????? 4"/>
+                    <img src="gallery teo/SmartSelect_20240722_182339_Gallery.jpg" class="circle-images image5" alt="????? 5"/>
+                    <img src="gallery teo/SmartSelect_20240722_182155_Gallery.jpg" class="circle-images image6" alt="????? 6"/>
+                </div>
+            </div>
+        </div>
+        <section id="hobbies" class="center-text">
+            <h3><u>My Hobbies</u></h3>
+            <ul>
+                <li>Disassembly and assembly</li>
+                <li>Music</li>
+                <li>Vehicles</li>
+                <li>Trips</li>
+                <li>Comedy movies</li>
+                <li>Real estate transactions</li>
+            </ul>
+        </section>
+        <section id="work" class="center-text">
+            <h2><u>Work Experience</u></h2>
+            <p>I worked for a year and a half as a logistics manager for the "Garlitz" bakery on weekends.</p>
+            <p>From 2015 until today I work at the <a href="https://youtu.be/LlUAKF7kYkA" target="_blank">"Mahodar"</a> flour mill. At first, I worked there as a logistics manager and after about a year the general manager who was there left and I took the position. During this time, I acquired the skill to work in an orderly manner, going down to the smallest details and making sure that everything works as it should.</p>
+            <p>I acquired team management and organization skills in a very professional and efficient way (in a way that makes it fun for the employees to work and makes it fun for them in the workplace and on the other hand to get the most out of them and that they will want to give of themselves to the business). Taking responsibility, improving and working efficiency, working under great pressure, finding creative solutions to problems, and more.</p>
+            <p>I am a person who is very dedicated to his place of work and gives my all to work and for hours (some would say that is too much). I work in a thorough and professional manner and always strive to do the best possible without concessions. My demand from myself is nothing less than excellence.</p>
+        </section>
+		<section id="QA"></section>
+		<h2><u>Why QA?</u></h2>
+		<p>Because I think it suits me in many ways: I have the ability to pay attention to details, to see the object in "three dimensions". I really like to see and test things. Therefore, I looked for a profession that matches my skills and I found that the QA position suits me very well.</p>
+		<p>I studied QA at the Gal Matlon Automation College (number one in Israel).</p>
+		<p><b>I would love for you to invite me to a job interview and be impressed</b></p>
+		</section>
+		<h3>Knowledge of Softwares</h3>
+		<div class="icons-container">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Icon" width="100" height="100">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Icon" width="100" height="100" color="white">
+<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Icon" width="100" height="100">  
+</div>
+        <section id="contact" class="center-text">
+           <h3>Contact Us</h3>
+<div class="contact-icons">
+<a href="mailto:a0548429622@gmail.com">
+<img src="gallery teo/email.png" alt="Email Icon" style="margin-right: 10px;">
+</a>
+<a href="tel:+972506653551">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone Icon" class="phone-icon" style="margin-right: 10px;">
+    </a>
+</div>
+</div>
+</section>    
+</div>
+</div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModal");
+        var closeBtn = document.getElementById("closeModal");
+
+        btn.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "flex";
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
