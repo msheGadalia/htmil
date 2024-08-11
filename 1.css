@@ -97,6 +97,34 @@ body {
     z-index: 1000;
     padding: 10px 0;
 	flex-wrap: wrap;
+	/* ... other styles ... */
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Change to column to stack items vertically */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .main {
+    margin-top: 60px; /* Adjust margin as needed based on the height of your nav */
+  }
+
+  .nav-item {
+    flex: none;
+    width: 100%;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
+
     
 }
 
